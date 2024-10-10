@@ -13,10 +13,16 @@ html {
 }
 
 body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
   background-color:#50d8e0;
-  color: black
+  color: black;
+  overflow: hidden;
+  height: 85vh;
+  
 
-  ;
+  
 }
 
 header {
@@ -71,16 +77,30 @@ header .logo img {
 
 .carrousel {
   position: relative;
-  max-width: 800px;
   margin: auto;
+  width: 100%;
+  
+
 }
-.carrousel-imagenes{
+.carrousel-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: max-content;
+  max-height: max-content;
+  margin: 126px 150px;
+}
+.carrousel-imagenes img { 
+
   width: 100%;
   display: none;
+ 
 }
 
 .carrousel-imagenes img.active{
-  display: flex;
+  display: block;
+
 }
 button.ant , button.sig {
   position: absolute;
