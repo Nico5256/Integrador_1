@@ -23,3 +23,7 @@ imagenes[indiceImagen].style.display = "block";
 
 
 
+
+
+
+

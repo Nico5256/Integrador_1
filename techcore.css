@@ -106,8 +106,8 @@ button.ant , button.sig {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: white;
-  color: black;
+  background-color: transparent;
+  color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
