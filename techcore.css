@@ -16,18 +16,16 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-  background-color:#50d8e0;
+  background-color: #50d8e0;
   color: black;
   overflow: hidden;
   height: 85vh;
   flex-direction: column;
-
-  
 }
 
 header {
   color: white;
-  background-color:  black;
+  background-color: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -40,10 +38,9 @@ header {
 }
 nav {
   color: #ffffff;
-display: flex;
-justify-content: center;
-align-items: center;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header ul {
@@ -51,58 +48,45 @@ header ul {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-header  ul li  {
+header ul li {
   list-style: none;
   margin: 20px;
 }
 
 header ul li a {
   position: relative;
-  font-family: "Poppins" , sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0 15px;
   text-decoration: none;
   color: white;
   letter-spacing: 1px;
   font-size: 600;
-  transition: 0,3s;
+  transition: 0, 3s;
 }
 header .logo img {
   max-width: 100px;
   min-width: 100px;
   align-items: flex-start;
-
 }
 
-.carrousel {
+.carrousel-container {
   position: relative;
-  margin: auto;
-  width: 100%;
-  
-
-}
-.carrousel-container{
+  width: 600px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  max-width: max-content;
-  max-height: max-content;
-  margin: 126px 150px;
+  overflow: hidden;
 }
-.carrousel-imagenes img { 
 
+#carrousel-imagenes {
   width: 100%;
-  display: none;
- 
+  height: auto;
+  object-fit: cover;
 }
 
-.carrousel-imagenes img.active{
-  display: block;
-
-}
-button.ant , button.sig {
+.carrousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -114,13 +98,15 @@ button.ant , button.sig {
   font-size: 18px;
 }
 
-button.ant {
-  left: 0;
-}
-button.sig{
-  right: 0;
+#ant-button {
+  left: 10px;
 }
 
+#sig-button {
+  right: 10px;
+}
 
-
-
+.contenedor {
+  font-size: 24px;
+  color: white;
+}
