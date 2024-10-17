@@ -20,7 +20,7 @@ body {
   color: black;
   overflow: hidden;
   height: 85vh;
-  
+  flex-direction: column;
 
   
 }
