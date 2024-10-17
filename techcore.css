@@ -84,6 +84,7 @@ header .logo img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  margin-top: 270px;
 }
 
 .carrousel-button {
@@ -109,4 +110,5 @@ header .logo img {
 .contenedor {
   font-size: 24px;
   color: white;
+  margin: 50px;
 }
