@@ -19,7 +19,7 @@ body {
   background-color: #50d8e0;
   color: black;
   overflow: hidden;
-  height: 85vh;
+  height: 100vh;
   flex-direction: column;
 }
 
@@ -84,7 +84,7 @@ header .logo img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  margin-top: 270px;
+  margin-top: 200px;
 }
 
 .carrousel-button {
@@ -111,4 +111,19 @@ header .logo img {
   font-size: 24px;
   color: white;
   margin: 50px;
+}
+
+
+footer {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 25px;
+
+
+
+  
+  
+  
+  
 }
