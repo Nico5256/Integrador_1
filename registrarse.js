@@ -4,6 +4,7 @@ function validarRegistro(event){
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
+    const password = document.getElementById('password').value
     let Valido = true;
 
     limpiarErrores();
@@ -31,8 +32,14 @@ Valido=false;
         Valido = false;
     }
 
+    const validarContra = /^(?=.*[A-Z])(?=.*\d).+$/;
+    if (!validarContra.test(password)){
+        mostrarError('passwordError' , 'El telefono debe tener por lo menos una mayuscula y un numero')
+        Valido = false;
+    }
+
     if(Valido){
-        mostrarDatosEnviados(name,email,phone);
+        mostrarDatosEnviados(name,email,phone,password);
     }
     
 }
@@ -46,9 +53,10 @@ function limpiarErrores(){
     document.getElementById('nameError').textContent = '';
     document.getElementById('emailError').textContent = '';
     document.getElementById('phoneError').textContent = '';
+    document.getElementById('passwordError').textContent = '';
 }
 
-function mostrarDatosEnviados(name, email, phone){
+function mostrarDatosEnviados(name, email, phone , password){
     const registroDataDiv = document.getElementById('registroData');
     registroDataDiv.innerHTML= '';
 
@@ -56,18 +64,22 @@ function mostrarDatosEnviados(name, email, phone){
     titulo.textContent = 'Datos enviados';
 
     const nameP = document.createElement('p');
-    nameP.textContent = `Nombre :${name}`;
+    nameP.textContent = `Nombre: ${name}`;
 
     const emailP = document.createElement('p');
     emailP.textContent = `Correo electrónico: ${email}`;
 
     const phoneP = document.createElement('p');
-    phoneP.textContent = `Telefono :${phone}`;
+    phoneP.textContent = `Telefono: ${phone}`;
+
+    const passwordP = document.createElement('p');
+    passwordP.textContent =  `Contraseña: ${password} `
 
     registroDataDiv.appendChild(titulo);
     registroDataDiv.appendChild(nameP);
     registroDataDiv.appendChild(emailP);
     registroDataDiv.appendChild(phoneP);
+    registroDataDiv.appendChild(passwordP);
 }
 
 const form = document.getElementById('eventForm');
