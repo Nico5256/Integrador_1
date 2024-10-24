@@ -34,7 +34,7 @@ Valido=false;
 
     const validarContra = /^(?=.*[A-Z])(?=.*\d).+$/;
     if (!validarContra.test(password)){
-        mostrarError('passwordError' , 'El telefono debe tener por lo menos una mayuscula y un numero')
+        mostrarError('passwordError' , 'La contraseña debe tener por lo menos una mayuscula y un numero')
         Valido = false;
     }
 
@@ -74,6 +74,9 @@ function mostrarDatosEnviados(name, email, phone , password){
 
     const passwordP = document.createElement('p');
     passwordP.textContent =  `Contraseña: ${password} `
+
+    
+    
 
     registroDataDiv.appendChild(titulo);
     registroDataDiv.appendChild(nameP);
